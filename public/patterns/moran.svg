@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 모란문 — 겹꽃 도식 -->
+  <!-- 외곽 꽃잎 8장 -->
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#e74c3c" transform="rotate(0   100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#c0392b" transform="rotate(45  100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#e74c3c" transform="rotate(90  100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#c0392b" transform="rotate(135 100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#e74c3c" transform="rotate(180 100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#c0392b" transform="rotate(225 100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#e74c3c" transform="rotate(270 100 100)"/>
+  <ellipse cx="100" cy="55"  rx="18" ry="30" fill="#c0392b" transform="rotate(315 100 100)"/>
+  <!-- 내곽 꽃잎 -->
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5a0a0" transform="rotate(22  100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5b0b0" transform="rotate(67  100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5a0a0" transform="rotate(112 100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5b0b0" transform="rotate(157 100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5a0a0" transform="rotate(202 100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5b0b0" transform="rotate(247 100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5a0a0" transform="rotate(292 100 100)"/>
+  <ellipse cx="100" cy="68"  rx="12" ry="22" fill="#f5b0b0" transform="rotate(337 100 100)"/>
+  <!-- 꽃술 -->
+  <circle cx="100" cy="100" r="18" fill="#b8860b"/>
+  <circle cx="100" cy="100" r="10" fill="#d4a012"/>
+  <circle cx="100" cy="100" r="5"  fill="#fdf6e3"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">모란문</text>
+</svg>

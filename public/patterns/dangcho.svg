@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 당초문 — 넝쿨 연속 문양 도식 -->
+  <!-- 주 줄기 -->
+  <path d="M10,100 C30,60 50,140 70,100 C90,60 110,140 130,100 C150,60 170,140 190,100" fill="none" stroke="#2d6d3a" stroke-width="3"/>
+  <!-- 상부 덩굴 -->
+  <path d="M30,80 C25,55 45,45 50,65" fill="none" stroke="#2d6d3a" stroke-width="2"/>
+  <circle cx="50" cy="58" r="8" fill="#c0392b" stroke="#2d6d3a" stroke-width="1.5"/>
+  <path d="M90,80 C85,55 105,45 110,65" fill="none" stroke="#2d6d3a" stroke-width="2"/>
+  <circle cx="110" cy="58" r="8" fill="#b8860b" stroke="#2d6d3a" stroke-width="1.5"/>
+  <path d="M150,80 C145,55 165,45 170,65" fill="none" stroke="#2d6d3a" stroke-width="2"/>
+  <circle cx="170" cy="58" r="8" fill="#c0392b" stroke="#2d6d3a" stroke-width="1.5"/>
+  <!-- 하부 덩굴 -->
+  <path d="M50,120 C45,145 65,155 70,135" fill="none" stroke="#2d6d3a" stroke-width="2"/>
+  <circle cx="68" cy="142" r="8" fill="#1a4a7a" stroke="#2d6d3a" stroke-width="1.5"/>
+  <path d="M110,120 C105,145 125,155 130,135" fill="none" stroke="#2d6d3a" stroke-width="2"/>
+  <circle cx="128" cy="142" r="8" fill="#b8860b" stroke="#2d6d3a" stroke-width="1.5"/>
+  <!-- 잎사귀 -->
+  <ellipse cx="40"  cy="72"  rx="10" ry="5" fill="#4a9a5a" opacity="0.7" transform="rotate(-30 40 72)"/>
+  <ellipse cx="100" cy="72"  rx="10" ry="5" fill="#4a9a5a" opacity="0.7" transform="rotate(-30 100 72)"/>
+  <ellipse cx="160" cy="72"  rx="10" ry="5" fill="#4a9a5a" opacity="0.7" transform="rotate(-30 160 72)"/>
+  <ellipse cx="60"  cy="128" rx="10" ry="5" fill="#4a9a5a" opacity="0.7" transform="rotate(30 60 128)"/>
+  <ellipse cx="120" cy="128" rx="10" ry="5" fill="#4a9a5a" opacity="0.7" transform="rotate(30 120 128)"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">당초문</text>
+</svg>

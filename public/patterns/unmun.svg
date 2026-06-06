@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 운문 — 구름 문양 도식 -->
+  <!-- 중앙 구름 -->
+  <path d="M50,110 Q45,90 60,85 Q62,70 78,72 Q82,58 100,60 Q118,58 122,72 Q138,70 140,85 Q155,90 150,110 Z" fill="#e8f0f8" stroke="#1a4a7a" stroke-width="2"/>
+  <!-- 구름 내부 곡선 -->
+  <path d="M65,110 Q80,95 100,95 Q120,95 135,110" fill="none" stroke="#1a4a7a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- 여의두형 꼬리 -->
+  <path d="M100,110 Q90,130 80,140 Q95,145 100,155 Q105,145 120,140 Q110,130 100,110 Z" fill="#1a4a7a" opacity="0.6"/>
+  <!-- 장식 소운 -->
+  <path d="M20,60 Q18,50 25,48 Q27,40 35,42 Q38,35 45,37 Q52,35 55,42 Q62,40 63,48 Q70,50 68,60 Z" fill="#e8f0f8" stroke="#1a4a7a" stroke-width="1.5"/>
+  <path d="M130,150 Q128,140 135,138 Q137,130 145,132 Q148,125 155,127 Q162,125 165,132 Q172,130 173,138 Q180,140 178,150 Z" fill="#e8f0f8" stroke="#1a4a7a" stroke-width="1.5"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">운문</text>
+</svg>

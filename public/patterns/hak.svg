@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 학문 — 학 도식 -->
+  <!-- 몸통 -->
+  <ellipse cx="105" cy="100" rx="35" ry="22" fill="#f0ede8" stroke="#3d3530" stroke-width="1.5"/>
+  <!-- 목 -->
+  <path d="M75,95 Q65,70 70,55" stroke="#3d3530" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- 머리 -->
+  <circle cx="70" cy="50" r="12" fill="#f0ede8" stroke="#3d3530" stroke-width="1.5"/>
+  <!-- 붉은 정수리 -->
+  <ellipse cx="70" cy="42" rx="6" ry="4" fill="#c0392b"/>
+  <!-- 부리 -->
+  <path d="M75,52 L92,50 L75,48 Z" fill="#b8860b"/>
+  <!-- 눈 -->
+  <circle cx="74" cy="50" r="2.5" fill="#1a1410"/>
+  <!-- 날개 -->
+  <path d="M90,90 Q120,70 155,80 Q140,100 105,105 Z" fill="#1a1410" opacity="0.85"/>
+  <path d="M90,110 Q120,130 155,120 Q140,100 105,95 Z" fill="#e0ddd8"/>
+  <!-- 꼬리깃 -->
+  <path d="M138,95 Q165,85 175,100 Q165,115 138,105 Z" fill="#1a1410" opacity="0.7"/>
+  <!-- 다리 -->
+  <line x1="100" y1="122" x2="95"  y2="158" stroke="#b8860b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="110" y1="122" x2="115" y2="158" stroke="#b8860b" stroke-width="3" stroke-linecap="round"/>
+  <!-- 발 -->
+  <path d="M88,158 L95,158 L98,168" stroke="#b8860b" stroke-width="2" fill="none"/>
+  <path d="M108,158 L115,158 L112,168" stroke="#b8860b" stroke-width="2" fill="none"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">학문</text>
+</svg>

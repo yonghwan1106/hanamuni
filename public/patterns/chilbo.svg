@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 칠보문 — 원형 연결 문양 도식 -->
+  <!-- 중앙 원 -->
+  <circle cx="100" cy="100" r="28" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="100" cy="100" r="10" fill="#b8860b"/>
+  <!-- 6방향 연결원 -->
+  <circle cx="100" cy="44"  r="22" fill="none" stroke="#1a4a7a" stroke-width="2.5"/>
+  <circle cx="100" cy="156" r="22" fill="none" stroke="#1a4a7a" stroke-width="2.5"/>
+  <circle cx="52"  cy="72"  r="22" fill="none" stroke="#2d6d3a" stroke-width="2.5"/>
+  <circle cx="148" cy="72"  r="22" fill="none" stroke="#2d6d3a" stroke-width="2.5"/>
+  <circle cx="52"  cy="128" r="22" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <circle cx="148" cy="128" r="22" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <!-- 내부 보석 점 -->
+  <circle cx="100" cy="44"  r="7" fill="#b8860b"/>
+  <circle cx="100" cy="156" r="7" fill="#b8860b"/>
+  <circle cx="52"  cy="72"  r="7" fill="#c0392b"/>
+  <circle cx="148" cy="72"  r="7" fill="#c0392b"/>
+  <circle cx="52"  cy="128" r="7" fill="#1a4a7a"/>
+  <circle cx="148" cy="128" r="7" fill="#1a4a7a"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">칠보문</text>
+</svg>

@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --muk:   #1a1410;
+  --hong:  #c0392b;
+  --cheong:#1a4a7a;
+  --geum:  #b8860b;
+  --baek:  #f8f4ef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #1a1410;
+  background: #f8f4ef;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 전통 테두리 장식 */
+.hanamuni-border {
+  border: 1px solid rgba(184, 134, 11, 0.25);
+  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.06);
+}
+
+/* 카드 hover */
+.pattern-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pattern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(26, 20, 16, 0.14);
+}
+
+/* 전통성 점수 게이지 애니메이션 */
+.score-bar {
+  transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 감성 칩 */
+.emotion-chip {
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* 로딩 스피너 — 오방색 테마 */
+@keyframes hanamuni-spin {
+  0%   { border-top-color: var(--hong); }
+  25%  { border-top-color: var(--cheong); }
+  50%  { border-top-color: var(--geum); }
+  75%  { border-top-color: var(--muk); }
+  100% { border-top-color: var(--hong); }
+}
+.hanamuni-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(26,20,16,0.1);
+  border-radius: 50%;
+  animation: hanamuni-spin 1.2s linear infinite;
+}
+
+/* 전통 패턴 배경 (hero) — 미세 격자 */
+.hero-bg {
+  background-color: #1a1410;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(184,134,11,0.08) 39px,
+      rgba(184,134,11,0.08) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(184,134,11,0.08) 39px,
+      rgba(184,134,11,0.08) 40px
+    );
+}

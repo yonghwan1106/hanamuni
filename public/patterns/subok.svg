@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 수복문 — 수(壽)복(福) 문양화 도식 -->
+  <!-- 테두리 장식 -->
+  <rect x="10" y="10" width="180" height="180" rx="12" fill="none" stroke="#b8860b" stroke-width="2"/>
+  <rect x="16" y="16" width="168" height="168" rx="8"  fill="none" stroke="#c0392b" stroke-width="1"/>
+  <!-- 壽 자 (전서체 도식) -->
+  <text x="58" y="110" font-size="62" fill="#c0392b" font-family="serif" font-weight="bold" opacity="0.85">壽</text>
+  <!-- 福 자 (전서체 도식) -->
+  <text x="108" y="110" font-size="62" fill="#1a4a7a" font-family="serif" font-weight="bold" opacity="0.85">福</text>
+  <!-- 네 모서리 당초 장식 -->
+  <path d="M18,18 Q30,20 28,32 Q36,25 28,18 Z" fill="#b8860b" opacity="0.6"/>
+  <path d="M182,18 Q170,20 172,32 Q164,25 172,18 Z" fill="#b8860b" opacity="0.6"/>
+  <path d="M18,182 Q30,180 28,168 Q36,175 28,182 Z" fill="#b8860b" opacity="0.6"/>
+  <path d="M182,182 Q170,180 172,168 Q164,175 172,182 Z" fill="#b8860b" opacity="0.6"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">수복문</text>
+</svg>

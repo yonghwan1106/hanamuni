@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 박쥐문 — 오복 박쥐 도식 -->
+  <!-- 중앙 박쥐 -->
+  <ellipse cx="100" cy="100" rx="20" ry="12" fill="#1a1410"/>
+  <!-- 날개 좌 -->
+  <path d="M80,100 Q55,75 35,90 Q50,110 80,105 Z" fill="#c0392b"/>
+  <path d="M80,100 Q55,115 40,110 Q55,130 80,110 Z" fill="#c0392b" opacity="0.8"/>
+  <!-- 날개 우 -->
+  <path d="M120,100 Q145,75 165,90 Q150,110 120,105 Z" fill="#c0392b"/>
+  <path d="M120,100 Q145,115 160,110 Q145,130 120,110 Z" fill="#c0392b" opacity="0.8"/>
+  <!-- 귀 -->
+  <ellipse cx="92"  cy="89" rx="5" ry="8" fill="#1a1410"/>
+  <ellipse cx="108" cy="89" rx="5" ry="8" fill="#1a1410"/>
+  <!-- 눈 -->
+  <circle cx="94"  cy="97" r="3" fill="#b8860b"/>
+  <circle cx="106" cy="97" r="3" fill="#b8860b"/>
+  <!-- 복(福) 글자 자리 -->
+  <text x="100" y="104" text-anchor="middle" font-size="8" fill="#fdf6e3" font-family="serif">福</text>
+  <!-- 네 모서리 소형 박쥐 -->
+  <ellipse cx="35"  cy="35"  rx="10" ry="6"  fill="#c0392b"/>
+  <ellipse cx="165" cy="35"  rx="10" ry="6"  fill="#c0392b"/>
+  <ellipse cx="35"  cy="165" rx="10" ry="6"  fill="#c0392b"/>
+  <ellipse cx="165" cy="165" rx="10" ry="6"  fill="#c0392b"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">박쥐문(오복)</text>
+</svg>

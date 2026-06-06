@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 연화문 — 연꽃 도식 -->
+  <!-- 외곽 꽃잎 8장 -->
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#f5b8c0" transform="rotate(0   100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#e8a0b0" transform="rotate(45  100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#f5b8c0" transform="rotate(90  100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#e8a0b0" transform="rotate(135 100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#f5b8c0" transform="rotate(180 100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#e8a0b0" transform="rotate(225 100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#f5b8c0" transform="rotate(270 100 100)"/>
+  <ellipse cx="100" cy="58" rx="15" ry="35" fill="#e8a0b0" transform="rotate(315 100 100)"/>
+  <!-- 내화 -->
+  <circle cx="100" cy="100" r="28" fill="#fdf6e3"/>
+  <circle cx="100" cy="100" r="20" fill="#b8860b" opacity="0.7"/>
+  <!-- 연밥 -->
+  <circle cx="100" cy="100" r="12" fill="#d4a012"/>
+  <circle cx="93"  cy="95"  r="3"  fill="#fdf6e3"/>
+  <circle cx="107" cy="95"  r="3"  fill="#fdf6e3"/>
+  <circle cx="100" cy="108" r="3"  fill="#fdf6e3"/>
+  <circle cx="93"  cy="105" r="2"  fill="#fdf6e3"/>
+  <circle cx="107" cy="105" r="2"  fill="#fdf6e3"/>
+  <!-- 잎 -->
+  <ellipse cx="100" cy="172" rx="28" ry="14" fill="#2d6d3a" opacity="0.7"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">연화문</text>
+</svg>

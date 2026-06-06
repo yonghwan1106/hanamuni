@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#f8f4ef"/>
+  <!-- 태극문 — 음양 원형 도식 -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#1a4a7a" stroke-width="3"/>
+  <!-- 상단 청색 반원 -->
+  <path d="M100,30 A70,70 0 0,1 100,170 A35,35 0 0,1 100,100 A35,35 0 0,0 100,30 Z" fill="#1a4a7a"/>
+  <!-- 하단 홍색 반원 -->
+  <path d="M100,30 A70,70 0 0,0 100,170 A35,35 0 0,0 100,100 A35,35 0 0,1 100,30 Z" fill="#c0392b"/>
+  <!-- 상단 소원 -->
+  <circle cx="100" cy="65" r="17" fill="#c0392b"/>
+  <!-- 하단 소원 -->
+  <circle cx="100" cy="135" r="17" fill="#1a4a7a"/>
+  <!-- 외곽 팔괘 점 (간략) -->
+  <circle cx="100" cy="22" r="4" fill="#1a1410"/>
+  <circle cx="148" cy="52" r="4" fill="#1a1410"/>
+  <circle cx="178" cy="100" r="4" fill="#1a1410"/>
+  <circle cx="148" cy="148" r="4" fill="#1a1410"/>
+  <circle cx="100" cy="178" r="4" fill="#1a1410"/>
+  <circle cx="52" cy="148" r="4" fill="#1a1410"/>
+  <circle cx="22" cy="100" r="4" fill="#1a1410"/>
+  <circle cx="52" cy="52" r="4" fill="#1a1410"/>
+  <text x="100" y="197" text-anchor="middle" font-size="9" fill="#3d3530" font-family="serif">태극문</text>
+</svg>
