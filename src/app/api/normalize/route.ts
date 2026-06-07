@@ -90,6 +90,7 @@ export async function POST(req: NextRequest) {
   const { story = "", chips = [] } = body;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
+  console.log("[normalize] hasKey=", !!apiKey, "len=", apiKey?.length ?? 0);
 
   if (apiKey) {
     try {
@@ -132,9 +133,12 @@ JSON으로만 응답하세요:
             mode: "real",
           } satisfies NormalizeResponse);
         }
+        console.error("[normalize] no JSON in response");
+      } else {
+        console.error("[normalize] anthropic status=", res.status, (await res.text()).slice(0, 150));
       }
-    } catch {
-      // 실모드 실패 시 mock 폴백
+    } catch (e) {
+      console.error("[normalize] threw:", String(e).slice(0, 200));
     }
   }
 
