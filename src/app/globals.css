@@ -3,11 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --muk:   #1a1410;
-  --hong:  #c0392b;
-  --cheong:#1a4a7a;
-  --geum:  #b8860b;
-  --baek:  #f8f4ef;
+  /* 오방색 + 길트 토큰 */
+  --muk:        #1a1410;
+  --muk-deep:   #120d0a;
+  --muk-soft:   #231a14;
+  --hong:       #b3402f;
+  --cheong:     #1a4a7a;
+  --geum:       #b8860b;
+  --geum-light: #d4af37;
+  --geum-bright:#e8c860;
+  --baek:       #f8f4ef;
+  --hanji:      #f3ece0;
+  --hanji-warm: #efe5d4;
+
+  /* 금색 헤어라인 */
+  --gilt-line:  rgba(184, 134, 11, 0.42);
+  --gilt-soft:  rgba(184, 134, 11, 0.16);
+
+  /* 한글 디스플레이 — 송명(<link>로 로드, tailwind font-display 와 연결) */
+  --font-display: "Song Myung", "Nanum Myeongjo", serif;
 }
 
 html {
@@ -16,37 +30,190 @@ html {
 
 body {
   color: #1a1410;
-  background: #f8f4ef;
+  background: #f3ece0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "palt" 1;
 }
 
-/* 전통 테두리 장식 */
+::selection {
+  background: rgba(184, 134, 11, 0.22);
+  color: #1a1410;
+}
+
+/* 포커스 가시성 — 접근성 (금색 링) */
+*:focus-visible {
+  outline: 2px solid var(--geum-light);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─────────────────────────────────────────────
+   한지(韓紙) 종이 질감 — 미세 grain/noise
+   섹션 배경에 은은하게 올림
+   ───────────────────────────────────────────── */
+.hanji-paper {
+  position: relative;
+  background-color: var(--hanji);
+}
+.hanji-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+/* 한지 섬유결 — 가로 미세 줄 */
+.hanji-fibre::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(140, 110, 60, 0.035) 2px,
+    rgba(140, 110, 60, 0.035) 3px
+  );
+}
+
+/* 먹빛 위 미세 노이즈 (히어로 깊이) */
+.ink-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ─────────────────────────────────────────────
+   금색 헤어라인 룰 — 박물관 금박 분할선
+   ───────────────────────────────────────────── */
+.gilt-rule {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gilt-line) 18%,
+    var(--geum-light) 50%,
+    var(--gilt-line) 82%,
+    transparent 100%
+  );
+}
+.gilt-hairline {
+  border: 1px solid var(--gilt-soft);
+}
+
+/* 금박 텍스트 — 워드마크/숫자에 박물관 금 광택 */
+.gilt-text {
+  background: linear-gradient(
+    100deg,
+    #b8860b 0%,
+    #e8c860 38%,
+    #fff3cf 50%,
+    #d4af37 62%,
+    #b8860b 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ─────────────────────────────────────────────
+   전통 테두리 장식 (기존 클래스 유지·격상)
+   ───────────────────────────────────────────── */
 .hanamuni-border {
-  border: 1px solid rgba(184, 134, 11, 0.25);
-  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.06);
+  border: 1px solid rgba(184, 134, 11, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(184, 134, 11, 0.10),
+    0 0 0 6px rgba(184, 134, 11, 0.04);
 }
 
-/* 카드 hover */
+/* 족자/현판 작품 프레임 — 금색 매트 + 한지 바탕 */
+.gilt-frame {
+  position: relative;
+  background:
+    linear-gradient(180deg, #faf6ee 0%, #f1e7d6 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(212, 175, 55, 0.45),
+    inset 0 0 0 8px rgba(255, 255, 255, 0.55),
+    inset 0 0 0 9px rgba(184, 134, 11, 0.22),
+    0 18px 44px rgba(26, 20, 16, 0.18);
+}
+.gilt-frame::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  pointer-events: none;
+  border: 1px solid rgba(184, 134, 11, 0.30);
+}
+
+/* ─────────────────────────────────────────────
+   카드 hover (기존 .pattern-card 유지·격상)
+   ───────────────────────────────────────────── */
 .pattern-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease, border-color 0.4s ease;
 }
 .pattern-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(26, 20, 16, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(26, 20, 16, 0.16);
+  border-color: rgba(184, 134, 11, 0.55);
+}
+/* 호버 시 금박 광택 스윕 */
+.gilt-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.gilt-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(232, 200, 96, 0.28),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+.gilt-sweep:hover::after {
+  left: 130%;
 }
 
-/* 전통성 점수 게이지 애니메이션 */
+/* ─────────────────────────────────────────────
+   전통성 점수 게이지 애니메이션 (기존 유지)
+   ───────────────────────────────────────────── */
 .score-bar {
-  transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* 감성 칩 */
+/* 감성 칩 (기존 유지·격상) */
 .emotion-chip {
-  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition: background 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.emotion-chip:hover {
+  transform: translateY(-1px);
 }
 
-/* 로딩 스피너 — 오방색 테마 */
+/* ─────────────────────────────────────────────
+   로딩 스피너 — 오방색 테마 (기존 클래스/동작 유지)
+   ───────────────────────────────────────────── */
 @keyframes hanamuni-spin {
   0%   { border-top-color: var(--hong); }
   25%  { border-top-color: var(--cheong); }
@@ -57,33 +224,113 @@ body {
 .hanamuni-spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid rgba(26,20,16,0.1);
+  border: 4px solid rgba(26, 20, 16, 0.10);
   border-radius: 50%;
   animation: hanamuni-spin 1.2s linear infinite;
 }
 
-/* 이미지 점진 노출 — 완성되는 대로 부드럽게 페이드인 */
+/* ─────────────────────────────────────────────
+   이미지 점진 노출 (기존 fadein 키프레임 유지)
+   ───────────────────────────────────────────── */
 @keyframes fadein {
   from { opacity: 0; transform: scale(0.97); }
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* 전통 패턴 배경 (hero) — 미세 격자 */
+/* 스태거드 페이드인 — 히어로/섹션 등장 */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise-in {
+  opacity: 0;
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.rise-in.d1 { animation-delay: 0.10s; }
+.rise-in.d2 { animation-delay: 0.22s; }
+.rise-in.d3 { animation-delay: 0.34s; }
+.rise-in.d4 { animation-delay: 0.46s; }
+.rise-in.d5 { animation-delay: 0.58s; }
+.rise-in.d6 { animation-delay: 0.70s; }
+
+/* 금박 인장(印章) 회전 등장 */
+@keyframes seal-in {
+  from { opacity: 0; transform: rotate(-12deg) scale(0.7); }
+  to   { opacity: 1; transform: rotate(-4deg) scale(1); }
+}
+.seal-in {
+  opacity: 0;
+  animation: seal-in 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s forwards;
+}
+
+/* 느린 회전 — 배경 문양 모티프 */
+@keyframes drift-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.drift-spin {
+  animation: drift-spin 90s linear infinite;
+}
+
+/* ─────────────────────────────────────────────
+   전통 패턴 배경 (hero) — 기존 .hero-bg 클래스 유지·격상
+   먹빛 + 금색 미세 격자 + 비네트
+   ───────────────────────────────────────────── */
 .hero-bg {
-  background-color: #1a1410;
+  position: relative;
+  background-color: #120d0a;
   background-image:
+    radial-gradient(
+      ellipse 80% 60% at 70% 18%,
+      rgba(184, 134, 11, 0.10),
+      transparent 70%
+    ),
     repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 39px,
-      rgba(184,134,11,0.08) 39px,
-      rgba(184,134,11,0.08) 40px
+      transparent 47px,
+      rgba(184, 134, 11, 0.05) 47px,
+      rgba(184, 134, 11, 0.05) 48px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
-      transparent 39px,
-      rgba(184,134,11,0.08) 39px,
-      rgba(184,134,11,0.08) 40px
+      transparent 47px,
+      rgba(184, 134, 11, 0.05) 47px,
+      rgba(184, 134, 11, 0.05) 48px
     );
+}
+/* 히어로 하단 한지 전환 페더 */
+.hero-feather::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(243, 236, 224, 0.0) 30%, #f3ece0 100%);
+}
+
+/* 모션 민감 사용자 배려 (접근성) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rise-in,
+  .seal-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 인쇄 — 결과 저장(인쇄) 시 깔끔하게 */
+@media print {
+  .hero-bg, .hanji-paper::before, .ink-grain::after { background: #fff !important; }
+  .no-print { display: none !important; }
 }
