@@ -92,7 +92,9 @@ async function gptImage(prompt: string, apiKey: string, size: string): Promise<s
     const res = await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ model: "gpt-image-2", prompt, size, n: 1 }),
+      // quality:"low" — 3종 병렬 ~25s로 Vercel 함수 타임아웃(60s) 내 완료 + 비용 절감.
+      // (high/auto는 장당 ~57s+로 타임아웃 발생) 발표 데모는 응답속도 우선.
+      body: JSON.stringify({ model: "gpt-image-2", prompt, size, n: 1, quality: "low" }),
     });
     if (!res.ok) return null;
     const data = await res.json();
