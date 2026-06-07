@@ -90,7 +90,6 @@ export async function POST(req: NextRequest) {
   const { story = "", chips = [] } = body;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  console.log("[normalize] hasKey=", !!apiKey, "len=", apiKey?.length ?? 0);
 
   if (apiKey) {
     try {

@@ -11,6 +11,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import patternsData from "@/data/patterns.sample.json";
 
+// 3종 이미지 병렬 생성이 기본 함수 타임아웃(10~15s)을 넘을 수 있어 상향.
+// (Hobby 최대 60s. 병렬이라 실 소요 ≈ 가장 느린 1장 수준이지만 콜드스타트 여유 확보.)
+export const maxDuration = 60;
+
 export interface GenerateRequest {
   labels: string[];
   patternId?: string;
